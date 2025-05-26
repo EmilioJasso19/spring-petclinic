@@ -10,13 +10,13 @@ pipeline {
         }
       }
       steps {
-        sh 'mvn clean install -X'
+        sh 'mvn clean install'
       }
     }
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t shanem/spring-petclinic:latest .'
+        sh 'docker build -t emiliojasso19/spring-petclinic:latest .'
       }
     }
   }
